@@ -1,0 +1,60 @@
+
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">Create Teams Meeting
+  </span>
+  <button >
+    <span class="material-icons">home</span>
+  </button>
+</mat-toolbar>
+<div style="margin-left: 400px;">
+<h2 style="margin-left: 16px;">Create Teams Meeting</h2>
+
+  <div class="example-form" style="margin-left: 16px;">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Meeting name</mat-label>
+      <input matInput placeholder="Meeting Name" [(ngModel)]="meetingName" >
+      <!-- [(ngModel)]="Meeting Name" #username="ngModel" -->
+    </mat-form-field>
+  </div>
+<div class="example-form" style="margin-left: 16px;margin-top: -7px; ">
+<input  style="height: 42px;width: 489px;"  [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [(ngModel)]="startTime" placeholder="Begin time UTC">
+<owl-date-time #dt1></owl-date-time>
+</div>
+<div class="example-form" style="margin-left: 16px;margin-top: 9px;margin-bottom: 2px;">
+  <input style="height: 42px;width: 489px;" [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" [(ngModel)]="endTime" placeholder="End time UTC">
+  <owl-date-time #dt2></owl-date-time>
+  </div>
+  
+   <div class="example-form" style="margin-left: 16px;">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Location</mat-label>
+      <input matInput placeholder="Location"  [(ngModel)]="location"  >
+      <!-- [(ngModel)]="LoginRequest.username" #username="ngModel" -->
+    </mat-form-field>
+  </div>
+ <div class="example-form" style="margin-left: 16px;">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Emails of Attendees separated with;</mat-label>
+              <input matInput placeholder="email"  [(ngModel)]="email" >
+            </mat-form-field>
+   </div>
+   <div style="margin-left: 16px;">
+    <button mat-raised-button color="primary" (click)="submit()">Primary</button>
+   </div>
+  </div>
+<!-- <div class="example-form" style="margin-left: 16px;" *ngIf="dateVisible">
+<owl-date-time-inline 
+[(ngModel)]="test"
+[selectMode]="'range'" 
+[hour12Timer]="true" 
+#dt10>
+<button (click)="close()">close</button>
+</owl-date-time-inline>
+</div>
+<div class="example-form" style="margin-left: 16px;">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Meeting name</mat-label>
+    <input matInput placeholder="Username" [(ngModel)]="test" (click)="ToEvent()"  >
+    [(ngModel)]="LoginRequest.username" #username="ngModel" -
+  </mat-form-field>
+</div> -->
